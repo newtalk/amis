@@ -852,7 +852,7 @@ export class DrawerRenderer extends Drawer {
     if (action.actionType === 'close' || action.actionType === 'cancel') {
       const rendererEvent = await dispatchEvent(
         'cancel',
-        createObject(this.props.data, {data})
+        createObject(this.props.data, data)
       );
       if (rendererEvent?.prevented) {
         return;
@@ -863,7 +863,7 @@ export class DrawerRenderer extends Drawer {
     } else if (action.actionType === 'confirm') {
       const rendererEvent = await dispatchEvent(
         'confirm',
-        createObject(this.props.data, {data})
+        createObject(this.props.data, data)
       );
       if (rendererEvent?.prevented) {
         return;
